@@ -29,16 +29,9 @@ float p(float x,int n){
   return ans;
 }
 
-int tong(int n, int m){
-  int ans=0,start;
-  if (n>6 && n%2==0){
-    start=n;
-  }
-  else if (n>6 && n%2!=0){
-    start=n-1;
-  }
-  else start=6;
-  for (int i=start;i<=m;i+=2){
+int tong(int n){
+  int ans=0;
+  for (int i=6;i<=n;i+=2){
     ans+=i;
   }
   return ans;
@@ -53,6 +46,6 @@ int main(){
   inc(n);
   inc(m);
   cout << "P(x,n) = " << fixed << p(x,n) << "\n";
-  cout << "Tong cac so chan lon hon 5 trong doan [" << n << ";" << m << "] la: " << tong(n,m) << "\n";
+  cout << "Tong cac so chan lon hon 5 trong doan [" << n << ";" << m << "] la: " << tong(m)-tong(n) << "\n";
   return 0;
 }

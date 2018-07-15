@@ -6,13 +6,13 @@ int main(){
   int n;
   cout << "Nhap so tien khach hang phai tra: ";
   cin >> n;
-  float ans=n;
+  float ans=0;
   if (n>=200 && n<300){
-    ans-=n*0.2;
+    ans=n*0.2;
   }
   else if (n>=300){
-    ans-=n*0.3;
+    ans=n*0.3;
   }
-  cout << "So tien khach hang phai tra la: " << ans << "\n";
+  cout << "So tien khuyen mai la: " << ans << "\n";
   return 0;
 }

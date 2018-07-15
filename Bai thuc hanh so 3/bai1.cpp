@@ -15,7 +15,7 @@ int main(){
   int n;
   cout << "Nhap so nguyen n: ";
   cin >> n;
-  double s=(giaithua(n)+1)/giaithua(n+1);
+  double s=(giaithua(n)+1.0)/giaithua(n+1);
   cout << "S = " << s << "\n";
   return 0;
 }

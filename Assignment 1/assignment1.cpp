@@ -22,9 +22,15 @@ void dec(int &n){
 }
 
 float p(float x,int n){
-  float ans = 2018*pow(x,n);
+  float temp=1;
+  for (int i=1;i<=n;i++){
+    temp*=x;
+  }
+  float ans=2018*temp;
+  temp=x;
   for (int i=2;i<=n;i++){
-    ans += (pow(x,i)/pow(3,i-1));
+    temp*=x/3.0;
+    ans+=temp;
   }
   return ans;
 }

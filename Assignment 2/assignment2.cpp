@@ -90,6 +90,7 @@ int main(){
   double *a=Input(n);
   Sort(a,n);
   cout << "Tong cac phan tu co chi so chan trong mang la " << SumOfEvenIndex(a,n) << endl;
+  cout << "Mang ban vua nhap la: " << endl;
   OutputToScreen(a,n);
   OutputToFile(a,n);
   TwoMax(a,n);
@@ -100,6 +101,7 @@ int main(){
     cout << "Mang khong chua ba so duong lien tiep" << endl;
   }
   DeleteElement(a,n,5);
+  cout << "Mang sau khi xoa di cac phan tu lon hon 5 la: " << endl;
   OutputToScreen(a,n);
   return 0;
 }

@@ -5,16 +5,14 @@
 
 using namespace std;
 
-double* Input(int &n){
+void Input(double *&a, int &n){
   cout << "Nhap vao so phan tu cua day so: ";
   cin >> n;
-  double *a;
-  a = (double*) malloc(n*sizeof(double));
+  a = new double [n];
   for (int i=0;i<n;i++){
     cout << "Nhap phan tu thu " << i+1 << ": ";
     cin >> *(a+i);
   }
-  return a;
 }
 
 void Sort(double a[], int n){
@@ -31,7 +29,7 @@ void Sort(double a[], int n){
 
 double SumOfEvenIndex(double a[], int n){
   double sum=0;
-  for (int i=0;i<n;i+=2){
+  for (int i=2;i<n;i+=2){
     sum+=*(a+i);
   }
   return sum;
@@ -87,7 +85,8 @@ void DeleteElement(double a[], int &n, double k){
 
 int main(){
   int n;
-  double *a=Input(n);
+  double *a;
+  Input(a,n);
   Sort(a,n);
   cout << "Tong cac phan tu co chi so chan trong mang la " << SumOfEvenIndex(a,n) << endl;
   cout << "Mang ban vua nhap la: " << endl;

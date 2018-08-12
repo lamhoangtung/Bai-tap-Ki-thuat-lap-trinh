@@ -72,13 +72,12 @@ bool ThreeConsecutivePositiveNumbers(double a[], int n){
 
 void DeleteElement(double a[], int &n, double k){
   for (int i=0;i<n;i++){
-    if (*(a+i)>k){
+    while (*(a+i)>k){
       n--;
       for (int j=i;j<n;j++){
         *(a+j)=*(a+j+1);
       }
       a = (double*) realloc(a,n*sizeof(double));
-      i--;
     }
   }
 }

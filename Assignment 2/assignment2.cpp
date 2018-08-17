@@ -6,12 +6,12 @@
 using namespace std;
 
 void Input(double *&a, int &n){
-  cout << "Nhap vao so phan tu cua day so: ";
+  cout << "Nhap so phan tu cua day so: ";
   cin >> n;
-  a = new double [n];
+  a = new double [n];
   for (int i=0;i<n;i++){
     cout << "Nhap phan tu thu " << i+1 << ": ";
-    cin >> *(a+i);
+    cin >> a[i];
   }
 }
 
@@ -83,8 +83,8 @@ void DeleteElement(double a[], int &n, double k){
 }
 
 int main(){
+  double *a = new double;
   int n;
-  double *a;
   Input(a,n);
   Sort(a,n);
   cout << "Tong cac phan tu co chi so chan trong mang la " << SumOfEvenIndex(a,n) << endl;
